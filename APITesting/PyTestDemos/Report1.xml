@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="10" time="0.311" timestamp="2022-04-03T23:32:37.145366" hostname="DESKTOP-1K97UET"><testcase classname="test_First" name="test_1" time="0.003" /><testcase classname="test_First" name="test_2" time="0.001" /><testcase classname="test_First" name="test_3" time="0.001" /><testcase classname="test_First" name="test_4" time="0.002"><failure message="AssertionError: title does not contain selenium word&#10;assert 'selenium' is 'selenium is used for automation'">def test_4():
+        word = "selenium"
+        title = "selenium is used for automation"
+&gt;       assert word is title, "title does not contain selenium word"
+E       AssertionError: title does not contain selenium word
+E       assert 'selenium' is 'selenium is used for automation'
+
+test_First.py:22: AssertionError</failure></testcase><testcase classname="test_four" name="test_responsecode200" time="0.002" /><testcase classname="test_four" name="test_responsecode400" time="0.002" /><testcase classname="test_second" name="test_login" time="0.002" /><testcase classname="test_second" name="test_checkout" time="0.002" /><testcase classname="test_second" name="test_logout" time="0.002" /><testcase classname="test_three.MyTestCase" name="test_something" time="0.003"><failure message="AssertionError: True != False">self = &lt;PyTestDemos.test_three.MyTestCase testMethod=test_something&gt;
+
+    def test_something(self):
+&gt;       self.assertEqual(True, False)  # add assertion here
+E       AssertionError: True != False
+
+test_three.py:6: AssertionError</failure></testcase></testsuite></testsuites>
