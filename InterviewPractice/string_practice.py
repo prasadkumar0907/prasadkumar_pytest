@@ -35,7 +35,7 @@ print(res)
 # search for a character and return it's first occurrence index
 
 string = 'happy python'
-char='p'
+char='y'
 i = 0
 
 for item in string:
@@ -58,8 +58,8 @@ for index, character in enumerate(string):
 
 for index in range(len(string)):
     if char == string[index]:
-        print(f'the {char} is ar position {index}')
-        break
+        print(f'the {char} is at position {index}')
+
 
 """ print char and ascii value if it is a vowel"""
 s = "HellO"
@@ -131,6 +131,26 @@ str1 = list(str_o)
 for char in str1:
     print(char, str1.count(char))
 
+# Python Program to find Last Occurrence of a Character in a String
+'''
+string = input("Please enter your own String : ")
+char = input("Please enter your own Character : ")
+
+flag = -1
+for i in range(len(string)):
+    if(string[i] == char):
+        flag = i
+
+if flag == -1:
+    print("Sorry! We haven't found the Search Character in this string ")
+else:
+    print("The Last Occurrence of ", char, " is Found at Position ", flag + 1)
+'''
+# Python program to Replace Blank Space with Hyphen in a String
+
+string = 'Replace blank space with hyphen'
+new_string = string.replace(' ', '-')
+print(new_string)
 
 
 
