@@ -15,7 +15,6 @@ print(d)
 
 d = {index: item for index, item in enumerate(string)}
 
-'''
 """ WAP to create a dictionary with word and its length pair"""
 sentence = "hello world welcome to python"
 words = sentence.split()
@@ -66,7 +65,7 @@ print(dict_)
 
 dict_word = {word: words.count(word) for word in words if len(word) % 2 == 0}
 print(dict_word)
-'''
+
 """ dictionary with index and word pair if the word is of odd length reverse it,
 else keep it as is"""
 
