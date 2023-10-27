@@ -1,0 +1,76 @@
+*** Pytest notes***
+
+Steps in learning pytest:
+
+1. Imported pytest package into my python file(test_demo)--> the file name should either start or end with 'test'':
+import pytest
+
+We have to create number of test cases
+
+2. We should add the test methods now. Always a test method should have a naming convention such that the
+test name should either start with "test" or end with "test"
+ex: test_m1()   or  m1_test()
+
+3. To execute these tests in the added file, just go to the terminal and type --- py.test
+
+Pytest will automatically detect all the test files which have the name starting/ending with test, also will execute
+only those methods with same convention as above.
+
+4. Added 2 more python files test_demo2 and test_demo3. Copied few test cases to both the files.
+
+5. When we run the same command again -- py.test, then all the test cases from all the test files will be picked
+for execution and will be executed
+
+6.Suppose if you want to execute only single test file then we can specify the test file name after py.test
+
+ex: PS C:\Users\Admin\PycharmProjects\pythonProject\Naveen_pytest> py.test test_demo3.py
+
+            or
+PS C:\Users\Admin\PycharmProjects\pythonProject> py.test Naveen_pytest test_demo.py
+
+7. Then we saw how to run test cases with group name, suppose test cases with names having "login" keyword should
+be executed, then we use "-k" to run only those test cases
+
+PS C:\Users\Admin\PycharmProjects\pythonProject\Naveen_pytest> py.test -k login
+                            or
+PS C:\Users\Admin\PycharmProjects\pythonProject\Naveen_pytest> py.test -k login -v
+
+-v means verbose, more details in the report will be displayed
+
+**** Markers*********
+
+1. To run test cases(group of test cases) we can use the concept of markers
+
+just mark the test cases as below:
+
+@pytest.mark.smoke/@pytest.mark.regression
+
+And then to run only those marked test cases, command used is:
+
+PS C:\Users\Admin\PycharmProjects\pythonProject\Naveen_pytest> py.test -m smoke
+
+-m ---represents marked test cases with name smoke and so on
+
+*** To run test in parallel***
+
+Created a new python file test_sample which consists of few methods/tests for invoking browsers with different URLs
+
+when we run this as:
+
+pytest test_sample.py
+All the methods/test cases in the file are run sequentially on after the other
+
+Note: Install pytest-xdist package to run the tests in parallel
+
+So, installed the package in the current Naveen_pytest package:
+
+pip install pytest-xdist
+
+And to run the test in parallel, give the following command
+
+pytest test_sample.py -n 5
+
+The number 5 indicates that we want to run 5 different tests in parallel
+
+
+
