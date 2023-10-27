@@ -5,7 +5,7 @@ def test_m1():
     b = 12
     assert a == b+2, "Assertion failes"
     assert a == b, "assertion failed as a is not eq to b"
-@pytest.mark.smoke
+@pytest.mark.sanity
 def test_m2():
     assert True
 
